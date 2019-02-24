@@ -10,8 +10,33 @@ final Color purpleCard = HexColor('#25212E'); // top
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: purpleCard,
+    return MaterialApp(
+      home: Container(
+        child: Center(
+          child: ListView(
+            children: <Widget>[
+              StreamCard(),
+              StreamCard(),
+              StreamCard(),
+            ],
+          ),
+        ),
+        color: purpleBackground,
+      ),
+    );
+  }
+}
+
+class StreamCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        color: purpleCard,
+        width: 200.0,
+        height: 200.0,
+      ),
     );
   }
 }
