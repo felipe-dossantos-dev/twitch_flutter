@@ -1,6 +1,6 @@
 # twitch_flutter
 
-A new Flutter project.
+A Flutter project to learn about building a twitch screen.
 
 ## Getting Started
 
