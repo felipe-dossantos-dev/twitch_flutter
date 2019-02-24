@@ -1,6 +1,6 @@
 # twitch_flutter
 
-A Flutter project to learn about building a twitch screen.
+A project to learn about flutter, recreating a screen of Twitch Android App
 
 ## Getting Started
 
