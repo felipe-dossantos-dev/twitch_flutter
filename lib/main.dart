@@ -31,11 +31,66 @@ class StreamCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
       child: Container(
         color: purpleCard,
-        width: 200.0,
-        height: 200.0,
+        height: 350.0,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[StreamCardImage(), StreamCardInfo()],
+        ),
+      ),
+    );
+  }
+}
+
+class StreamCardInfo extends StatelessWidget {
+  const StreamCardInfo({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class StreamCardImage extends StatelessWidget {
+  const StreamCardImage({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Stack(
+        children: <Widget>[
+          Container(
+            color: Colors.white30,
+            height: 225.0,
+          ),
+          Positioned(
+            bottom: 12.0,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(left: 12.0),
+                  child: Icon(Icons.add_circle, color: Colors.red, size: 16.0,),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 6.0),
+                  child: Text(
+                    '236.6k Viewers',
+                    style: TextStyle(color: Colors.white, fontSize: 14.0, decoration: TextDecoration.none),
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
